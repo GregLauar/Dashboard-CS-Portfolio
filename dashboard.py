@@ -26,30 +26,31 @@ DATA_DIR = os.path.join(script_dir, "data")
 @st.cache_data
 def load_all_data(data_directory):
     """
-    Loads all CSV files from the specified data directory.
+    Carrega todos os arquivos CSV do diretório de dados especificado.
     """
     files = {
         "cvm": os.path.join(data_directory, "CVM_Data.csv"),
-        "covenants": os.path.join(data_directory, "Specific_Covenants.csv"),
+        "specific_data": os.path.join(data_directory, "Specific_Data.csv"),
         "macro": os.path.join(data_directory, "Macro.csv"),
     }
     
     dataframes = {}
     for key, path in files.items():
         if not os.path.exists(path):
-            st.error(f"ERROR: File '{path}' not found. Please check the path.")
+            st.error(f"ERRO: Arquivo '{path}' não encontrado. Por favor, verifique o caminho.")
             return None
         try:
             dataframes[key] = pd.read_csv(path, sep=';', encoding='latin1')
+            # Remove o caractere BOM (Byte Order Mark) se existir no início do cabeçalho
             if dataframes[key].columns[0].startswith('ï»¿'):
                 dataframes[key].rename(columns={dataframes[key].columns[0]: dataframes[key].columns[0][3:]}, inplace=True)
         except Exception as e:
-            st.error(f"Error loading {path}: {e}")
+            st.error(f"Erro ao carregar {path}: {e}")
             return None
 
-    # --- Specific DataFrame Processing ---
+    # --- Processamento Específico dos DataFrames ---
     
-    # CVM Data
+    # Dados CVM
     df_cvm = dataframes['cvm']
     df_cvm['data_referencia'] = pd.to_datetime(df_cvm['data_referencia'], errors='coerce')
     df_cvm = df_cvm.sort_values(by=['fundo', 'data_referencia'])
@@ -58,15 +59,15 @@ def load_all_data(data_directory):
     )
     dataframes['cvm'] = df_cvm
 
-    # Specific Covenants
-    df_cov = dataframes['covenants']
-    df_cov['Date'] = pd.to_datetime(df_cov['Date'], errors='coerce')
+    # Dados Específicos
+    df_spec = dataframes['specific_data']
+    df_spec['Date'] = pd.to_datetime(df_spec['Date'], errors='coerce', dayfirst=True)
     for col in ['Value', 'Threshold']:
-        if col in df_cov.columns:
-            df_cov[col] = pd.to_numeric(df_cov[col].astype(str).str.replace(',', '.'), errors='coerce')
-    dataframes['covenants'] = df_cov
+        if col in df_spec.columns:
+            df_spec[col] = pd.to_numeric(df_spec[col].astype(str).str.replace(',', '.'), errors='coerce')
+    dataframes['specific_data'] = df_spec
 
-    # Macro Data
+    # Dados Macro
     df_macro = dataframes['macro']
     df_macro['Date'] = pd.to_datetime(df_macro['Date'], errors='coerce', dayfirst=True)
     for col in df_macro.columns:
@@ -77,29 +78,30 @@ def load_all_data(data_directory):
     return dataframes
 
 def style_compliance_table(df_to_style):
-    """ Styles the compliance table based on status. """
+    """ Colore a tabela de compliance com base no status. """
     def color_cell(val):
-        if val == 'Flag': return 'background-color: #ffcccb'
-        if val == 'OK': return 'background-color: #90ee90'
-        if val == 'N/A': return 'background-color: #d3d3d3'
+        val_str = str(val).upper()
+        if 'FLAG' in val_str: return 'background-color: #ffcccb'
+        if 'OK' in val_str: return 'background-color: #90ee90'
+        if 'N/A' in val_str: return 'background-color: #d3d3d3'
         return ''
     return df_to_style.style.applymap(color_cell)
 
-# --- Start of Dashboard ---
+# --- Início do Dashboard ---
 st.title("📈 Portfolio Monitoring Dashboard")
 
-with st.spinner('Loading data... Please wait.'):
+with st.spinner('Carregando dados... Por favor, aguarde.'):
     all_data = load_all_data(DATA_DIR)
 
 if all_data:
     df_cvm = all_data['cvm']
-    df_covenants = all_data.get('covenants')
+    df_specific_data = all_data.get('specific_data')
     df_macro = all_data.get('macro')
 
-    # --- Tab Creation ---
+    # --- Criação das Abas ---
     tab1, tab2, tab3 = st.tabs([" Portfolio Summary ", " Deal by Deal Analysis ", " Macro Analysis "])
 
-    # --- TAB 1: PORTFOLIO SUMMARY ---
+    # --- ABA 1: RESUMO DO PORTFÓLIO ---
     with tab1:
         st.header("Overall Portfolio Summary")
         latest_data_all_funds = df_cvm.sort_values('data_referencia').groupby('fundo').tail(1)
@@ -114,27 +116,34 @@ if all_data:
             compliance_table = latest_data_all_funds[status_cols].set_index('fundo')
             st.dataframe(style_compliance_table(compliance_table))
         else:
-            st.info("No CVM covenant status columns found in the data.")
+            st.info("Nenhuma coluna de status de covenant da CVM foi encontrada nos dados.")
 
-    # --- TAB 2: DEAL BY DEAL ANALYSIS ---
+    # --- ABA 2: ANÁLISE POR FUNDO ---
     with tab2:
         st.sidebar.header("Deal by Deal Filters")
-        fundos_disponiveis = sorted(df_cvm['fundo'].unique())
+        
+        fundos_cvm = df_cvm['fundo'].unique()
+        fundos_specific = []
+        if df_specific_data is not None:
+            fundos_specific = df_specific_data['Deal'].unique()
+        
+        todos_os_fundos = pd.concat([pd.Series(fundos_cvm), pd.Series(fundos_specific)]).unique()
+        fundos_disponiveis = sorted([f for f in todos_os_fundos if pd.notna(f)])
+        
         selected_fund = st.sidebar.selectbox('Select a Fund (Deal):', options=fundos_disponiveis, key='deal_selector')
         
+        st.header(f"Analysis: {selected_fund}")
+
+        # --- Seção de Dados da CVM ---
         df_fund_cvm = df_cvm[df_cvm['fundo'] == selected_fund].copy()
-        
-        st.header(f"Fund Analysis: {selected_fund}")
-        
         if not df_fund_cvm.empty:
             latest_data_cvm = df_fund_cvm.iloc[-1]
             kpi_cols = st.columns(3)
             kpi_cols[0].metric("Net Worth", f"R$ {latest_data_cvm['net_worth']/1e6:,.2f} M")
             kpi_cols[1].metric("PV of Credit Rights", f"R$ {latest_data_cvm['pv_credit_rights']/1e6:,.2f} M")
             kpi_cols[2].metric("PDD", f"R$ {latest_data_cvm['pdd']/1e6:,.2f} M")
-        
-        st.subheader("CVM Data Analysis")
-        if not df_fund_cvm.empty:
+            
+            st.subheader("CVM Data Analysis")
             graph_col1, graph_col2 = st.columns(2)
             
             with graph_col1:
@@ -148,20 +157,23 @@ if all_data:
             
             with graph_col2:
                 st.subheader("2. Subordination vs. Threshold")
-                sub_cols_to_plot = []
-                for col_name in df_fund_cvm.columns:
-                    if 'subordination_' in col_name:
-                        threshold_col = col_name.replace('subordination', 'threshold')
-                        if threshold_col in df_fund_cvm.columns and pd.notna(latest_data_cvm.get(threshold_col)):
-                            sub_cols_to_plot.append(col_name)
-                            sub_cols_to_plot.append(threshold_col)
+                metrics_to_plot = {}
+                sub_cols = [col for col in df_fund_cvm.columns if 'subordination_' in col]
+                for sub_col in sub_cols:
+                    threshold_col = sub_col.replace('subordination', 'threshold')
+                    if threshold_col in df_fund_cvm.columns and df_fund_cvm[threshold_col].notna().any():
+                        metrics_to_plot[sub_col] = True
+                        metrics_to_plot[threshold_col] = True
+                sub_cols_to_plot = list(metrics_to_plot.keys())
                 if sub_cols_to_plot:
-                    df_melt2 = df_fund_cvm.melt(id_vars='data_referencia', value_vars=list(set(sub_cols_to_plot)), var_name='Metric', value_name='Ratio')
-                    fig2 = px.line(df_melt2, x='data_referencia', y='Ratio', color='Metric', labels={"data_referencia": "Date", "Ratio": "Subordination Ratio"})
-                    fig2.update_yaxes(tickformat=".2%")
-                    st.plotly_chart(fig2, use_container_width=True)
-                else:
-                    st.warning("No CVM subordination metrics with defined thresholds found for this fund.")
+                    df_melt2 = df_fund_cvm[['data_referencia'] + sub_cols_to_plot].melt(id_vars='data_referencia', value_vars=sub_cols_to_plot, var_name='Metric', value_name='Ratio')
+                    df_melt2.dropna(subset=['Ratio'], inplace=True)
+                    if not df_melt2.empty:
+                        fig2 = px.line(df_melt2, x='data_referencia', y='Ratio', color='Metric', labels={"data_referencia": "Date", "Ratio": "Subordination Ratio"})
+                        fig2.update_yaxes(tickformat=".2%")
+                        st.plotly_chart(fig2, use_container_width=True)
+                    else: st.warning("No CVM subordination data found for this fund.")
+                else: st.warning("No CVM subordination metrics with defined thresholds found for this fund.")
 
             with graph_col1:
                 st.subheader("3. Junior Quota Cumulative Return")
@@ -172,15 +184,12 @@ if all_data:
             with graph_col2:
                 st.subheader("4. Delinquency by Range (% of PV)")
                 delinq_cols = [col for col in df_fund_cvm.columns if col.startswith('delinq_ratio_')]
-                delinq_order = ['delinq_ratio_30', 'delinq_ratio_31_60', 'delinq_ratio_61_90', 'delinq_ratio_91_120', 'delinq_ratio_121_150', 'delinq_ratio_151_180', 'delinq_ratio_181_360', 'delinq_ratio_over_360']
                 if delinq_cols:
                     df_melt4 = df_fund_cvm.melt(id_vars='data_referencia', value_vars=delinq_cols, var_name='Delinquency Bucket', value_name='Percent of PV')
-                    final_delinq_order_labels = [label.replace('delinq_ratio_', 'Overdue ') for label in delinq_order]
-                    fig4 = px.bar(df_melt4, x='data_referencia', y='Percent of PV', color='Delinquency Bucket', barmode='stack', category_orders={'Delinquency Bucket': final_delinq_order_labels})
+                    fig4 = px.bar(df_melt4, x='data_referencia', y='Percent of PV', color='Delinquency Bucket', barmode='stack')
                     fig4.update_yaxes(tickformat=".2%")
                     st.plotly_chart(fig4, use_container_width=True)
-                else:
-                    st.warning("No delinquency metrics found for this fund.")
+                else: st.warning("No delinquency metrics found for this fund.")
 
             with graph_col1:
                 st.subheader("5. Monthly Origination vs. Net Allocation")
@@ -194,58 +203,70 @@ if all_data:
             with graph_col2:
                 st.subheader("6. Receivables Curve (Aging)")
                 prazo_cols = [col for col in df_fund_cvm.columns if col.startswith('CR_due_')]
-                prazo_order = ['CR_due_30', 'CR_due_31_60', 'CR_due_61_90', 'CR_due_91_120', 'CR_due_121_150', 'CR_due_151_180', 'CR_due_181_360', 'CR_due_over_360']
                 if prazo_cols:
                     df_melt6 = df_fund_cvm.melt(id_vars='data_referencia', value_vars=prazo_cols, var_name='Aging Bucket', value_name='Value (BRL)')
-                    final_prazo_order_labels = [label.replace('CR_due_', 'Term ') for label in prazo_order]
-                    fig6 = px.bar(df_melt6, x='data_referencia', y='Value (BRL)', color='Aging Bucket', barmode='stack', category_orders={'Aging Bucket': final_prazo_order_labels})
+                    fig6 = px.bar(df_melt6, x='data_referencia', y='Value (BRL)', color='Aging Bucket', barmode='stack')
                     st.plotly_chart(fig6, use_container_width=True)
-                else:
-                    st.warning("No aging metrics found for this fund.")
+                else: st.warning("No aging metrics found for this fund.")
         else:
-            st.warning("No CVM data available for this fund.")
+            st.info(f"No CVM data available for {selected_fund}.")
         
         st.markdown("---")
-        st.subheader("Specific Covenant Analysis")
-        if df_covenants is not None:
-            df_fund_cov = df_covenants[df_covenants['Deal'] == selected_fund].copy()
-            if not df_fund_cov.empty:
-                st.markdown("##### Covenant Performance Over Time")
-                covenant_table = df_fund_cov.pivot_table(index='Date', columns='Metric', values='Value').sort_index(ascending=False)
-                status_table = df_fund_cov.pivot_table(index='Date', columns='Metric', values='Status', aggfunc='first').sort_index(ascending=False)
+        
+        # --- Seção de Dados Específicos ---
+        st.subheader("Specific Data Analysis")
+        if df_specific_data is not None:
+            df_fund_spec = df_specific_data[df_specific_data['Deal'] == selected_fund].copy()
+            if not df_fund_spec.empty:
+                st.markdown("##### Performance Over Time")
+                df_fund_spec.dropna(subset=['Date'], inplace=True)
+                
+                covenant_table = df_fund_spec.pivot_table(index='Date', columns='Metric', values='Value').sort_index(ascending=False)
+                status_table = df_fund_spec.pivot_table(index='Date', columns='Metric', values='Status', aggfunc='first').sort_index(ascending=False)
                 status_table = status_table.reindex(index=covenant_table.index, columns=covenant_table.columns)
-                def color_covenant_cells(data):
+                
+                def color_specific_data_cells(data):
                     style_df = pd.DataFrame('', index=data.index, columns=data.columns)
                     for r_idx, row in status_table.iterrows():
                         for c_idx, status_val in row.items():
-                            if status_val == 'FLAG': style_df.loc[r_idx, c_idx] = 'background-color: #ffcccb'
-                            elif status_val == 'OK': style_df.loc[r_idx, c_idx] = 'background-color: #90ee90'
+                            if pd.isna(status_val): continue
+                            status_val_upper = str(status_val).upper()
+                            if 'FLAG' in status_val_upper: style_df.loc[r_idx, c_idx] = 'background-color: #ffcccb'
+                            elif 'OK' in status_val_upper: style_df.loc[r_idx, c_idx] = 'background-color: #90ee90'
                     return style_df
-                st.dataframe(covenant_table.style.format("{:,.2f}").apply(color_covenant_cells, axis=None))
-                st.markdown("##### Covenant Graphical Analysis")
-                available_metrics = sorted(df_fund_cov['Metric'].unique())
-                selected_metric = st.selectbox("Select a metric to visualize:", options=available_metrics)
-                df_metric_plot = df_fund_cov[df_fund_cov['Metric'] == selected_metric]
-                fig_cov = go.Figure()
-                fig_cov.add_trace(go.Scatter(x=df_metric_plot['Date'], y=df_metric_plot['Value'], name='Metric Value', mode='lines+markers'))
-                fig_cov.add_trace(go.Scatter(x=df_metric_plot['Date'], y=df_metric_plot['Threshold'], name='Threshold', mode='lines', line=dict(dash='dot', color='red')))
-                fig_cov.update_layout(title=f"Performance of: {selected_metric}", xaxis_title="Date", yaxis_title="Value")
-                st.plotly_chart(fig_cov, use_container_width=True)
+                
+                st.dataframe(covenant_table.style.format("{:,.2f}").apply(color_specific_data_cells, axis=None))
+                
+                st.markdown("##### Graphical Analysis")
+                available_metrics = sorted(df_fund_spec['Metric'].unique())
+                
+                for metric in available_metrics:
+                    df_metric_plot = df_fund_spec[df_fund_spec['Metric'] == metric].sort_values(by='Date')
+                    if not df_metric_plot.empty:
+                        fig_cov = go.Figure()
+                        fig_cov.add_trace(go.Scatter(x=df_metric_plot['Date'], y=df_metric_plot['Value'], name='Metric Value', mode='lines+markers'))
+                        fig_cov.add_trace(go.Scatter(x=df_metric_plot['Date'], y=df_metric_plot['Threshold'], name='Threshold', mode='lines', line=dict(dash='dot', color='red')))
+                        fig_cov.update_layout(title=f"Performance of: {metric}", xaxis_title="Date", yaxis_title="Value")
+                        st.plotly_chart(fig_cov, use_container_width=True)
             else:
-                st.warning("No specific covenant data found for this fund.")
+                st.info(f"No specific data available for {selected_fund}.")
         else:
-            st.info("File 'Specific_Covenants.csv' not loaded.")
-            
+            st.info("File 'Specific_Data.csv' not loaded.")
+        
 
-    # --- TAB 3: MACRO ANALYSIS ---
+    # --- ABA 3: ANÁLISE MACRO ---
     with tab3:
         st.header("Macroeconomic Analysis")
         if df_macro is not None:
+            # CORREÇÃO: Multiplica as colunas relevantes por 1,000,000 para a escala correta
+            cols_to_convert = ['Credit_Portfolio_Total_BRL_mn', 'Credit_Portfolio_Corporate_BRL_mn', 'Credit_Portfolio_Retail_BRL_mn', 'Primary_Result_YTD_ex-FX_BRL_mn']
+
             df_macro_analysis = df_macro.set_index('Date').sort_index()
 
             st.subheader("1. Total Credit Portfolio Brazil")
-            credit_cols = ['Credit_Portfolio_Total_BRL_mn', 'Credit_Portfolio_Corporate_BRL_mn', 'Credit_Portfolio_Retail_BRL_mn']
-            fig_credit = px.line(df_macro_analysis, y=credit_cols, title="Credit Portfolio Evolution (BRL mn)")
+            credit_cols = ['Credit_Portfolio_Total', 'Credit_Portfolio_Corporate', 'Credit_Portfolio_Retail']
+            # CORREÇÃO: Remove " (BRL mn)" do título
+            fig_credit = px.line(df_macro_analysis, y=credit_cols, title="Credit Portfolio Evolution")
             st.plotly_chart(fig_credit, use_container_width=True)
 
             st.subheader("2. Delinquency Trends")
@@ -292,9 +313,11 @@ if all_data:
                 fig_fiscal_debt = px.line(df_macro_analysis, y=fiscal_debt_cols, title="Net Debt (% GDP)")
                 st.plotly_chart(fig_fiscal_debt, use_container_width=True)
             with col2:
-                fig_primary_result = px.bar(df_macro_analysis, y='Primary_Result_YTD_ex-FX_BRL_mn', title="Primary Result YTD (BRL mn)")
+                # CORREÇÃO: Remove " (BRL mn)" do título
+                fig_primary_result = px.bar(df_macro_analysis, y='Primary_Result_YTD_ex-FX', title="Primary Result YTD")
                 st.plotly_chart(fig_primary_result, use_container_width=True)
         else:
             st.info("File 'Macro.csv' not loaded.")
 else:
-    st.info("Awaiting data load to display the dashboard.")
+    st.info("Aguardando o carregamento dos dados para exibir o dashboard.")
+
