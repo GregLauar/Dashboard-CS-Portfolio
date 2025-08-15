@@ -10,6 +10,45 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import os
 
+# ===============================================================
+# CÓDIGO DE VERIFICAÇÃO DE SENHA - COLE ISSO NO TOPO
+# ===============================================================
+def check_password():
+    """Retorna `True` se o usuário inseriu a senha correta."""
+
+    def password_entered():
+        """Verifica se a senha inserida pelo usuário está correta."""
+        if st.session_state["password"] == st.secrets["PASSWORD"]:
+            st.session_state["password_correct"] = True
+            del st.session_state["password"]
+        else:
+            st.session_state["password_correct"] = False
+
+    if st.session_state.get("password_correct", False):
+        return True
+
+    st.text_input(
+        "Type your password to continue", type="password", on_change=password_entered, key="password"
+    )
+    if "password_correct" in st.session_state and not st.session_state["password_correct"]:
+        st.error("😕 Incorrect Password")
+    return False
+
+if not check_password():
+    st.stop()
+# ===============================================================
+# FIM DO CÓDIGO DE VERIFICAÇÃO
+# ===============================================================
+
+
+# O RESTO DO SEU DASHBOARD COMEÇA AQUI
+# Exemplo:
+st.title("Dashboard-CS-Portfolio")
+st.write("Análises e monitoramento do seu portfólio.")
+
+# ... todo o seu código de cálculos, gráficos e tabelas continua normalmente aqui ...
+
+
 # --- Page Configuration ---
 st.set_page_config(
     page_title="Portfolio Monitoring Dashboard",
