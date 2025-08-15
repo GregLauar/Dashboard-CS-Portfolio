@@ -318,18 +318,18 @@ FIDC Alume;31/12/2024;Average fiscal term (calendar days);360;366;>=;FLAG
 FIDC Alume;31/01/2025;Average fiscal term (calendar days);366;366;>=;OK
 FIDC Alume;28/02/2025;Average fiscal term (calendar days);366;366;>=;OK
 FIDC Alume;31/03/2025;Average fiscal term (calendar days);366;366;>=;OK
-FIDC Vixtra;30/04/2024;LTV;0.444163971;0.75;<=;OK
-FIDC Vixtra;31/05/2024;LTV;0.46819178;0.75;<=;OK
-FIDC Vixtra;30/06/2024;LTV;0.530003316;0.75;<=;OK
-FIDC Vixtra;31/07/2024;LTV;0.529065128;0.75;<=;OK
-FIDC Vixtra;31/08/2024;LTV;0.536580691;0.75;<=;OK
-FIDC Vixtra;30/09/2024;LTV;0.553743261;0.75;<=;OK
-FIDC Vixtra;31/10/2024;LTV;0.549913633;0.75;<=;OK
-FIDC Vixtra;30/11/2024;LTV;0.556062372;0.75;<=;OK
-FIDC Vixtra;31/12/2024;LTV;0.522654422;0.75;<=;OK
-FIDC Vixtra;31/01/2025;LTV;0.608627582;0.75;<=;OK
-FIDC Vixtra;28/02/2025;LTV;0.392604739;0.75;<=;OK
-FIDC Vixtra;31/03/2025;LTV;0.474983724;0.75;<=;OK
+FIDC Vixtra;30/04/2024;LTV;0.477783706;0.75;<=;OK
+FIDC Vixtra;31/05/2024;LTV;0.479415675;0.75;<=;OK
+FIDC Vixtra;30/06/2024;LTV;0.544931582;0.75;<=;OK
+FIDC Vixtra;31/07/2024;LTV;0.538030688;0.75;<=;OK
+FIDC Vixtra;31/08/2024;LTV;0.559991172;0.75;<=;OK
+FIDC Vixtra;30/09/2024;LTV;0.553743259;0.75;<=;OK
+FIDC Vixtra;31/10/2024;LTV;0.549913632;0.75;<=;OK
+FIDC Vixtra;30/11/2024;LTV;0.556062374;0.75;<=;OK
+FIDC Vixtra;31/12/2024;LTV;0.52265442;0.75;<=;OK
+FIDC Vixtra;31/01/2025;LTV;0.607639238;0.75;<=;OK
+FIDC Vixtra;28/02/2025;LTV;0.411718738;0.75;<=;OK
+FIDC Vixtra;31/03/2025;LTV;0.53631048;0.75;<=;OK
 FIDC Turbi;30/04/2024;Coverage Ratio;0.9;0.9;>=;OK
 FIDC Turbi;31/05/2024;Coverage Ratio;0.9;0.9;>=;OK
 FIDC Turbi;30/06/2024;Coverage Ratio;0.9;0.9;>=;OK
@@ -898,37 +898,37 @@ FIDC Koin;31/03/2025;Over 90 Index;0.0541;0.175;<=;OK
 FIDC Koin;30/04/2025;Over 90 Index;0.0947;0.175;<=;OK
 FIDC Koin;31/05/2024;Over 90 Index;0.0504;0.175;<=;OK
 FIDC Koin;30/06/2024;Over 90 Index;0.0537;0.175;<=;OK
-CRI amora;28/02/2025;CRI Net worth;25.8;;;OK
-CRI amora;31/03/2025;CRI Net worth;28.8;;;OK
-CRI amora;30/04/2025;CRI Net worth;33.3;;;OK
-CRI amora;31/05/2025;CRI Net worth;33.5;;;OK
-CRI amora;30/06/2025;CRI Net worth;36.9;;;OK
-CRI amora;28/02/2025;LTV;0.905304829;0.9;<=;OK
-CRI amora;31/03/2025;LTV;0.920415225;0.9;<=;OK
-CRI amora;30/04/2025;LTV;1.09540636;0.9;<=;OK
-CRI amora;31/05/2025;LTV;0.953639144;0.9;<=;OK
-CRI amora;30/06/2025;LTV;1.012880562;0.9;<=;OK
-CRI amora;28/02/2025;LTV (adjusted for cash position);0.758286347;0.9;<=;OK
-CRI amora;31/03/2025;LTV (adjusted for cash position);0.863636364;0.9;<=;OK
-CRI amora;30/04/2025;LTV (adjusted for cash position);1.026490066;0.9;<=;OK
-CRI amora;31/05/2025;LTV (adjusted for cash position);0.825017197;0.9;<=;OK
-CRI amora;30/06/2025;LTV (adjusted for cash position);0.897302905;0.9;<=;OK
-CRI amora;28/02/2025;Duration of Credit Rights (months);38;;;OK
-CRI amora;31/03/2025;Duration of Credit Rights (months);36;;;OK
-CRI amora;30/04/2025;Duration of Credit Rights (months);36;;;OK
-CRI amora;31/05/2025;Duration of Credit Rights (months);35;;;OK
-CRI amora;30/06/2025;Duration of Credit Rights (months);35;;;OK
-CRI amora;31/03/2025;Mezza Subordination;0.089041096;;;OK
-CRI amora;30/04/2025;Mezza Subordination;0.069069069;;;OK
-CRI amora;31/05/2025;Mezza Subordination;0.069134328;;;OK
-CRI amora;30/06/2025;Mezza Subordination;0.062330623;;;OK
-CRI amora;31/12/2024;Real Estate Value;21.03688;;;OK
-CRI amora;31/01/2025;Real Estate Value;25.926074;;;OK
-CRI amora;28/02/2025;Real Estate Value;25.926074;;;OK
-CRI amora;31/03/2025;Real Estate Value;25.926074;;;OK
-CRI amora;30/04/2025;Real Estate Value;28.9;;;OK
-CRI amora;31/05/2025;Real Estate Value;28.3;;;OK
-CRI amora;30/06/2025;Real Estate Value;32.7;;;OK
+CRI Amora;28/02/2025;CRI Net worth;25.8;;;OK
+CRI Amora;31/03/2025;CRI Net worth;28.8;;;OK
+CRI Amora;30/04/2025;CRI Net worth;33.3;;;OK
+CRI Amora;31/05/2025;CRI Net worth;33.5;;;OK
+CRI Amora;30/06/2025;CRI Net worth;36.9;;;OK
+CRI Amora;28/02/2025;LTV;0.905304829;0.9;<=;OK
+CRI Amora;31/03/2025;LTV;0.920415225;0.9;<=;OK
+CRI Amora;30/04/2025;LTV;1.09540636;0.9;<=;OK
+CRI Amora;31/05/2025;LTV;0.953639144;0.9;<=;OK
+CRI Amora;30/06/2025;LTV;1.012880562;0.9;<=;OK
+CRI Amora;28/02/2025;LTV (adjusted for cash position);0.758286347;0.9;<=;OK
+CRI Amora;31/03/2025;LTV (adjusted for cash position);0.863636364;0.9;<=;OK
+CRI Amora;30/04/2025;LTV (adjusted for cash position);1.026490066;0.9;<=;OK
+CRI Amora;31/05/2025;LTV (adjusted for cash position);0.825017197;0.9;<=;OK
+CRI Amora;30/06/2025;LTV (adjusted for cash position);0.897302905;0.9;<=;OK
+CRI Amora;28/02/2025;Duration of Credit Rights (months);38;;;OK
+CRI Amora;31/03/2025;Duration of Credit Rights (months);36;;;OK
+CRI Amora;30/04/2025;Duration of Credit Rights (months);36;;;OK
+CRI Amora;31/05/2025;Duration of Credit Rights (months);35;;;OK
+CRI Amora;30/06/2025;Duration of Credit Rights (months);35;;;OK
+CRI Amora;31/03/2025;Mezza Subordination;0.089041096;;;OK
+CRI Amora;30/04/2025;Mezza Subordination;0.069069069;;;OK
+CRI Amora;31/05/2025;Mezza Subordination;0.069134328;;;OK
+CRI Amora;30/06/2025;Mezza Subordination;0.062330623;;;OK
+CRI Amora;31/12/2024;Real Estate Value;21.03688;;;OK
+CRI Amora;31/01/2025;Real Estate Value;25.926074;;;OK
+CRI Amora;28/02/2025;Real Estate Value;25.926074;;;OK
+CRI Amora;31/03/2025;Real Estate Value;25.926074;;;OK
+CRI Amora;30/04/2025;Real Estate Value;28.9;;;OK
+CRI Amora;31/05/2025;Real Estate Value;28.3;;;OK
+CRI Amora;30/06/2025;Real Estate Value;32.7;;;OK
 FIDC Principia BNPL;31/05/2025;FPD35;0.1644;0.12;<=;OK
 FIDC Principia BNPL;30/04/2025;FPD35;0.1105;0.12;<=;OK
 FIDC Principia BNPL;31/05/2025;SPD30;0.225;0.19;<=;FLAG
@@ -986,3 +986,126 @@ FIDC Culttivo;30/06/2025;Average CPR-F term (months);4.27;;;
 FIDC Culttivo;30/04/2025;Average CDA/WA term (months);1.51;;;
 FIDC Culttivo;31/05/2025;Average CDA/WA term (months);0.75;;;
 FIDC Culttivo;30/06/2025;Average CDA/WA term (months);11.13;;;
+FIDC Vixtra;45777;LTV;0.50721305;0.75;<=;OK
+FIDC Vixtra;45808;LTV;0.472829649;0.75;<=;OK
+FIDC Vixtra;45838;LTV;0.583113107;0.75;<=;OK
+FIDC Vixtra;45412;Weighted Average Portfolio Maturity (days);63;;;
+FIDC Vixtra;45443;Weighted Average Portfolio Maturity (days);57;;;
+FIDC Vixtra;45473;Weighted Average Portfolio Maturity (days);73;;;
+FIDC Vixtra;45504;Weighted Average Portfolio Maturity (days);76;;;
+FIDC Vixtra;45535;Weighted Average Portfolio Maturity (days);64;;;
+FIDC Vixtra;45565;Weighted Average Portfolio Maturity (days);68;;;
+FIDC Vixtra;45596;Weighted Average Portfolio Maturity (days);77;;;
+FIDC Vixtra;45626;Weighted Average Portfolio Maturity (days);69;;;
+FIDC Vixtra;45657;Weighted Average Portfolio Maturity (days);80;;;
+FIDC Vixtra;45688;Weighted Average Portfolio Maturity (days);73;;;
+FIDC Vixtra;45716;Weighted Average Portfolio Maturity (days);69;;;
+FIDC Vixtra;45747;Weighted Average Portfolio Maturity (days);85;;;
+FIDC Vixtra;45777;Weighted Average Portfolio Maturity (days);78;;;
+FIDC Vixtra;45808;Weighted Average Portfolio Maturity (days);66;;;
+FIDC Vixtra;45838;Weighted Average Portfolio Maturity (days);80;;;
+FIDC Vixtra;45412;Weighted Average Portfolio Rate (% p.m.);0.0183;;;
+FIDC Vixtra;45443;Weighted Average Portfolio Rate (% p.m.);0.0182;;;
+FIDC Vixtra;45473;Weighted Average Portfolio Rate (% p.m.);0.018;;;
+FIDC Vixtra;45504;Weighted Average Portfolio Rate (% p.m.);0.018;;;
+FIDC Vixtra;45535;Weighted Average Portfolio Rate (% p.m.);0.018;;;
+FIDC Vixtra;45565;Weighted Average Portfolio Rate (% p.m.);0.0179;;;
+FIDC Vixtra;45596;Weighted Average Portfolio Rate (% p.m.);0.0177;;;
+FIDC Vixtra;45626;Weighted Average Portfolio Rate (% p.m.);0.0184;;;
+FIDC Vixtra;45657;Weighted Average Portfolio Rate (% p.m.);0.0178;;;
+FIDC Vixtra;45688;Weighted Average Portfolio Rate (% p.m.);0.0182;;;
+FIDC Vixtra;45716;Weighted Average Portfolio Rate (% p.m.);0.0185;;;
+FIDC Vixtra;45747;Weighted Average Portfolio Rate (% p.m.);0.0192;;;
+FIDC Vixtra;45777;Weighted Average Portfolio Rate (% p.m.);0.0197;;;
+FIDC Vixtra;45808;Weighted Average Portfolio Rate (% p.m.);0.0199;;;
+FIDC Vixtra;45838;Weighted Average Portfolio Rate (% p.m.);0.0204;;;
+FIDC Vixtra;45412;Average Ticket;978123;;;
+FIDC Vixtra;45443;Average Ticket;917124;;;
+FIDC Vixtra;45473;Average Ticket;885398;;;
+FIDC Vixtra;45504;Average Ticket;879799;;;
+FIDC Vixtra;45535;Average Ticket;916766;;;
+FIDC Vixtra;45565;Average Ticket;970296;;;
+FIDC Vixtra;45596;Average Ticket;931992;;;
+FIDC Vixtra;45626;Average Ticket;1023930;;;
+FIDC Vixtra;45657;Average Ticket;1048580;;;
+FIDC Vixtra;45688;Average Ticket;1088538;;;
+FIDC Vixtra;45716;Average Ticket;1045897;;;
+FIDC Vixtra;45747;Average Ticket;1156803;;;
+FIDC Vixtra;45777;Average Ticket;1189566;;;
+FIDC Vixtra;45808;Average Ticket;1281483;;;
+FIDC Vixtra;45838;Average Ticket;1350411;;;
+FIDC Vixtra;45412;Top 1 Debtor;0.0611;;;
+FIDC Vixtra;45443;Top 1 Debtor;0.0622;;;
+FIDC Vixtra;45473;Top 1 Debtor;0.0571;;;
+FIDC Vixtra;45504;Top 1 Debtor;0.0443;;;
+FIDC Vixtra;45535;Top 1 Debtor;0.0442;;;
+FIDC Vixtra;45565;Top 1 Debtor;0.0671;;;
+FIDC Vixtra;45596;Top 1 Debtor;0.0376;;;
+FIDC Vixtra;45626;Top 1 Debtor;0.0368;;;
+FIDC Vixtra;45657;Top 1 Debtor;0.0295;;;
+FIDC Vixtra;45688;Top 1 Debtor;0.0386;;;
+FIDC Vixtra;45716;Top 1 Debtor;0.0285;;;
+FIDC Vixtra;45747;Top 1 Debtor;0.0333;;;
+FIDC Vixtra;45777;Top 1 Debtor;0.0321;;;
+FIDC Vixtra;45808;Top 1 Debtor;0.0263;;;
+FIDC Vixtra;45838;Top 1 Debtor;0.0266;;;
+FIDC Vixtra;45412;Top 3 Debtor;0.1605;;;
+FIDC Vixtra;45443;Top 3 Debtor;0.1635;;;
+FIDC Vixtra;45473;Top 3 Debtor;0.1643;;;
+FIDC Vixtra;45504;Top 3 Debtor;0.1279;;;
+FIDC Vixtra;45535;Top 3 Debtor;0.1314;;;
+FIDC Vixtra;45565;Top 3 Debtor;0.1461;;;
+FIDC Vixtra;45596;Top 3 Debtor;0.1125;;;
+FIDC Vixtra;45626;Top 3 Debtor;0.1096;;;
+FIDC Vixtra;45657;Top 3 Debtor;0.0881;;;
+FIDC Vixtra;45688;Top 3 Debtor;0.0954;;;
+FIDC Vixtra;45716;Top 3 Debtor;0.085;;;
+FIDC Vixtra;45747;Top 3 Debtor;0.0992;;;
+FIDC Vixtra;45777;Top 3 Debtor;0.0957;;;
+FIDC Vixtra;45808;Top 3 Debtor;0.0781;;;
+FIDC Vixtra;45838;Top 3 Debtor;0.0788;;;
+FIDC Vixtra;45412;Top 5 Debtor;0.2463;;;
+FIDC Vixtra;45443;Top 5 Debtor;0.2509;;;
+FIDC Vixtra;45473;Top 5 Debtor;0.2464;;;
+FIDC Vixtra;45504;Top 5 Debtor;0.2003;;;
+FIDC Vixtra;45535;Top 5 Debtor;0.2178;;;
+FIDC Vixtra;45565;Top 5 Debtor;0.2241;;;
+FIDC Vixtra;45596;Top 5 Debtor;0.1866;;;
+FIDC Vixtra;45626;Top 5 Debtor;0.1812;;;
+FIDC Vixtra;45657;Top 5 Debtor;0.1464;;;
+FIDC Vixtra;45688;Top 5 Debtor;0.1519;;;
+FIDC Vixtra;45716;Top 5 Debtor;0.1409;;;
+FIDC Vixtra;45747;Top 5 Debtor;0.1639;;;
+FIDC Vixtra;45777;Top 5 Debtor;0.1589;;;
+FIDC Vixtra;45808;Top 5 Debtor;0.1299;;;
+FIDC Vixtra;45838;Top 5 Debtor;0.13;;;
+FIDC Vixtra;45412;Top 10 Debtor;0.4076;;;
+FIDC Vixtra;45443;Top 10 Debtor;0.4224;;;
+FIDC Vixtra;45473;Top 10 Debtor;0.4232;;;
+FIDC Vixtra;45504;Top 10 Debtor;0.3416;;;
+FIDC Vixtra;45535;Top 10 Debtor;0.4267;;;
+FIDC Vixtra;45565;Top 10 Debtor;0.4088;;;
+FIDC Vixtra;45596;Top 10 Debtor;0.3647;;;
+FIDC Vixtra;45626;Top 10 Debtor;0.3568;;;
+FIDC Vixtra;45657;Top 10 Debtor;0.2909;;;
+FIDC Vixtra;45688;Top 10 Debtor;0.2915;;;
+FIDC Vixtra;45716;Top 10 Debtor;0.2783;;;
+FIDC Vixtra;45747;Top 10 Debtor;0.3228;;;
+FIDC Vixtra;45777;Top 10 Debtor;0.3111;;;
+FIDC Vixtra;45808;Top 10 Debtor;0.254;;;
+FIDC Vixtra;45838;Top 10 Debtor;0.2559;;;
+FIDC Vixtra;45412;Top 20 Debtor;0.5652;;;
+FIDC Vixtra;45443;Top 20 Debtor;0.6345;;;
+FIDC Vixtra;45473;Top 20 Debtor;0.6675;;;
+FIDC Vixtra;45504;Top 20 Debtor;0.5544;;;
+FIDC Vixtra;45535;Top 20 Debtor;0.655;;;
+FIDC Vixtra;45565;Top 20 Debtor;0.6543;;;
+FIDC Vixtra;45596;Top 20 Debtor;0.5901;;;
+FIDC Vixtra;45626;Top 20 Debtor;0.6308;;;
+FIDC Vixtra;45657;Top 20 Debtor;0.5393;;;
+FIDC Vixtra;45688;Top 20 Debtor;0.52;;;
+FIDC Vixtra;45716;Top 20 Debtor;0.4944;;;
+FIDC Vixtra;45747;Top 20 Debtor;0.5286;;;
+FIDC Vixtra;45777;Top 20 Debtor;0.5213;;;
+FIDC Vixtra;45808;Top 20 Debtor;0.4338;;;
+FIDC Vixtra;45838;Top 20 Debtor;0.4478;;;
