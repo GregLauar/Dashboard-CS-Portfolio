@@ -361,16 +361,6 @@ FIDC Turbi;30/06/2024;Fleet Vlaue pledged to the FIDC (BRL mn);213230532;;;
 FIDC Turbi;30/09/2024;Fleet Vlaue pledged to the FIDC (BRL mn);389157932.1;;;
 FIDC Turbi;31/12/2024;Fleet Vlaue pledged to the FIDC (BRL mn);625212150;;;
 FIDC Turbi;31/03/2025;Fleet Vlaue pledged to the FIDC (BRL mn);556711686.6;;;
-FIDC Turbi;31/03/2024;Senior Outstanding Balance;157686730.4;;;
-FIDC Turbi;30/06/2024;Senior Outstanding Balance;155793544.2;;;
-FIDC Turbi;30/09/2024;Senior Outstanding Balance;327988946.4;;;
-FIDC Turbi;31/12/2024;Senior Outstanding Balance;457508601.7;;;
-FIDC Turbi;31/03/2025;Senior Outstanding Balance;451687196.6;;;
-FIDC Turbi;31/03/2024;Mezza Outstanding Balance;27339314.57;;;
-FIDC Turbi;30/06/2024;Mezza Outstanding Balance;26960296.49;;;
-FIDC Turbi;30/09/2024;Mezza Outstanding Balance;45188860.87;;;
-FIDC Turbi;31/12/2024;Mezza Outstanding Balance;62161302.3;;;
-FIDC Turbi;31/03/2025;Mezza Outstanding Balance;62408709.06;;;
 FIDC Turbi;31/03/2024;Flow of Receivables + Fleet Value ;236743917;;;
 FIDC Turbi;30/06/2024;Flow of Receivables + Fleet Value ;256810532;;;
 FIDC Turbi;30/09/2024;Flow of Receivables + Fleet Value ;414423845.9;;;
@@ -986,16 +976,16 @@ FIDC Culttivo;30/04/2025;Average CDA/WA term (months);1.51;;;
 FIDC Culttivo;31/05/2025;Average CDA/WA term (months);0.75;;;
 FIDC Culttivo;30/06/2025;Average CDA/WA term (months);11.13;;;
 FIDC Vixtra;30/04/2025;LTV;0.50721305;0.75;<=;OK
-FIDC Vixtra;45808;LTV;0.472829649;0.75;<=;OK
-FIDC Vixtra;45838;LTV;0.583113107;0.75;<=;OK
-FIDC Vixtra;45412;Weighted Average Portfolio Maturity (days);63;;;
-FIDC Vixtra;45443;Weighted Average Portfolio Maturity (days);57;;;
-FIDC Vixtra;45473;Weighted Average Portfolio Maturity (days);73;;;
-FIDC Vixtra;45504;Weighted Average Portfolio Maturity (days);76;;;
-FIDC Vixtra;45535;Weighted Average Portfolio Maturity (days);64;;;
-FIDC Vixtra;45565;Weighted Average Portfolio Maturity (days);68;;;
-FIDC Vixtra;45596;Weighted Average Portfolio Maturity (days);77;;;
-FIDC Vixtra;45626;Weighted Average Portfolio Maturity (days);69;;;
+FIDC Vixtra;31/05/2025;LTV;0.472829649;0.75;<=;OK
+FIDC Vixtra;30/06/2025;LTV;0.583113107;0.75;<=;OK
+FIDC Vixtra;30/04/2024;Weighted Average Portfolio Maturity (days);63;;;
+FIDC Vixtra;31/05/2024;Weighted Average Portfolio Maturity (days);57;;;
+FIDC Vixtra;30/06/2024;Weighted Average Portfolio Maturity (days);73;;;
+FIDC Vixtra;31/07/2024;Weighted Average Portfolio Maturity (days);76;;;
+FIDC Vixtra;31/08/2024;Weighted Average Portfolio Maturity (days);64;;;
+FIDC Vixtra;30/09/2024;Weighted Average Portfolio Maturity (days);68;;;
+FIDC Vixtra;31/10/2024;Weighted Average Portfolio Maturity (days);77;;;
+FIDC Vixtra;30/11/2024;Weighted Average Portfolio Maturity (days);69;;;
 FIDC Vixtra;45657;Weighted Average Portfolio Maturity (days);80;;;
 FIDC Vixtra;45688;Weighted Average Portfolio Maturity (days);73;;;
 FIDC Vixtra;45716;Weighted Average Portfolio Maturity (days);69;;;
@@ -1103,6 +1093,16 @@ FIDC Vixtra;45596;Top 20 Debtor;0.5901;;;
 FIDC Vixtra;45626;Top 20 Debtor;0.6308;;;
 FIDC Vixtra;45657;Top 20 Debtor;0.5393;;;
 FIDC Vixtra;45688;Top 20 Debtor;0.52;;;
+FIDC Vixtra;45716;Top 20 Debtor;0.4944;;;
+FIDC Vixtra;45747;Top 20 Debtor;0.5286;;;
+FIDC Vixtra;45777;Top 20 Debtor;0.5213;;;
+FIDC Vixtra;45808;Top 20 Debtor;0.4338;;;
+FIDC Vixtra;45838;Top 20 Debtor;0.4478;;;
+FIDC Turbi;45777;Coverage Ratio;1.1;0.9;>=;OK
+FIDC Turbi;45808;Coverage Ratio;1.2;0.9;>=;OK
+FIDC Turbi;45838;# of cars pledged to the FIDC;4235;;;
+FIDC Turbi;45838;Fleet Vlaue pledged to the FIDC (BRL mn);556711686.6;;;
+FIDC Turbi;45838;Flow of Receivables + Fleet Value ;579798913.8;;;
 FIDC Vixtra;45716;Top 20 Debtor;0.4944;;;
 FIDC Vixtra;45747;Top 20 Debtor;0.5286;;;
 FIDC Vixtra;45777;Top 20 Debtor;0.5213;;;
