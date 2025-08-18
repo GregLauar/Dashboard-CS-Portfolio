@@ -231,10 +231,10 @@ Deb Mottu;31/08/2024;Escrow Account Held Balance;3.3847;2;>=;OK
 Deb Mottu;30/09/2024;Escrow Account Held Balance;3.1941;2;>=;OK
 Deb Mottu;31/10/2024;Escrow Account Held Balance;3.3221;2;>=;OK
 Deb Mottu;30/11/2024;Escrow Account Held Balance;3.4154;2;>=;OK
-Deb Mottu;31/12/2024;Escrow Account Held Balance;3.78;2;>=;OK
-Deb Mottu;31/01/2025;Escrow Account Held Balance;6.08;2;>=;OK
-Deb Mottu;28/02/2025;Escrow Account Held Balance;7.08;2;>=;OK
-Deb Mottu;31/03/2025;Escrow Account Held Balance;1.57;2;>=;FLAG
+Deb Mottu;31/12/2024;Escrow Account Held Balance;3.1243;2;>=;OK
+Deb Mottu;31/01/2025;Escrow Account Held Balance;3.1888;2;>=;OK
+Deb Mottu;28/02/2025;Escrow Account Held Balance;3.6332;2;>=;OK
+Deb Mottu;31/03/2025;Escrow Account Held Balance;2.3056;2;>=;OK
 Deb Mottu;31/01/2024;Fleet Occupancy;0.9566;0.75;>=;OK
 Deb Mottu;29/02/2024;Fleet Occupancy;0.9416;0.75;>=;OK
 Deb Mottu;31/03/2024;Fleet Occupancy;0.9201;0.75;>=;OK
@@ -339,9 +339,9 @@ FIDC Turbi;30/09/2024;Coverage Ratio;0.9;0.9;>=;OK
 FIDC Turbi;31/10/2024;Coverage Ratio;0.9;0.9;>=;OK
 FIDC Turbi;30/11/2024;Coverage Ratio;0.9;0.9;>=;OK
 FIDC Turbi;31/12/2024;Coverage Ratio;0.9;0.9;>=;OK
-FIDC Turbi;31/01/2025;Coverage Ratio;0.9;0.9;>=;OK
-FIDC Turbi;28/02/2025;Coverage Ratio;0.9;0.9;>=;OK
-FIDC Turbi;31/03/2025;Coverage Ratio;0.9;0.9;>=;OK
+FIDC Turbi;31/01/2025;Coverage Ratio;0.95;0.9;>=;OK
+FIDC Turbi;28/02/2025;Coverage Ratio;1;0.9;>=;OK
+FIDC Turbi;31/03/2025;Coverage Ratio;1.1;0.9;>=;OK
 FIDC Turbi;31/10/2024;UTR;0.756;;;
 FIDC Turbi;30/11/2024;UTR;0.626;;;
 FIDC Turbi;31/12/2024;UTR;0.707;;;
@@ -388,9 +388,8 @@ FIDC Turbi;31/12/2024;Liquidity Ratio;1.9;0.9;>=;OK
 FIDC Turbi;31/01/2025;Liquidity Ratio;1.9;0.9;>=;OK
 FIDC Turbi;28/02/2025;Liquidity Ratio;1.9;0.9;>=;OK
 FIDC Turbi;31/03/2025;Liquidity Ratio;1.9;0.9;>=;OK
-FIDC Turbi;30/04/2025;Liquidity Ratio;;;;
-FIDC Turbi;31/05/2025;Liquidity Ratio;;;;
-FIDC Turbi;30/06/2025;Liquidity Ratio;;;;
+FIDC Turbi;30/04/2025;Liquidity Ratio;4;0.9;>=;OK
+FIDC Turbi;31/05/2025;Liquidity Ratio;2;0.9;>=;OK
 FIDC UME;31/05/2024;FPD 30 3m;0;0.135;<=;OK
 FIDC UME;30/06/2024;FPD 30 3m;0;0.135;<=;OK
 FIDC UME;31/07/2024;FPD 30 3m;0.0849;0.135;<=;OK
@@ -582,7 +581,7 @@ Deb Mottu;31/05/2025;Cash Flow Coverage;2.393;1.2;>=;OK
 Deb Mottu;30/06/2025;Cash Flow Coverage;1.895;1.2;>=;OK
 Deb Mottu;30/04/2025;Escrow Account Held Balance;4.85;2;>=;OK
 Deb Mottu;31/05/2025;Escrow Account Held Balance;2.39;2;>=;OK
-Deb Mottu;30/06/2025;Escrow Account Held Balance;1.9;2;>=;FLAG
+Deb Mottu;30/06/2025;Escrow Account Held Balance;2.4307;2;>=;OK
 Deb Mottu V;30/04/2025;Escrow Account Held Balance;4.04;2;>=;OK
 Deb Mottu V;31/05/2025;Escrow Account Held Balance;3;2;>=;OK
 Deb Mottu V;30/06/2025;Escrow Account Held Balance;2.86;2;>=;OK
@@ -986,7 +985,7 @@ FIDC Culttivo;30/06/2025;Average CPR-F term (months);4.27;;;
 FIDC Culttivo;30/04/2025;Average CDA/WA term (months);1.51;;;
 FIDC Culttivo;31/05/2025;Average CDA/WA term (months);0.75;;;
 FIDC Culttivo;30/06/2025;Average CDA/WA term (months);11.13;;;
-FIDC Vixtra;45777;LTV;0.50721305;0.75;<=;OK
+FIDC Vixtra;30/04/2025;LTV;0.50721305;0.75;<=;OK
 FIDC Vixtra;45808;LTV;0.472829649;0.75;<=;OK
 FIDC Vixtra;45838;LTV;0.583113107;0.75;<=;OK
 FIDC Vixtra;45412;Weighted Average Portfolio Maturity (days);63;;;
@@ -1109,3 +1108,5 @@ FIDC Vixtra;45747;Top 20 Debtor;0.5286;;;
 FIDC Vixtra;45777;Top 20 Debtor;0.5213;;;
 FIDC Vixtra;45808;Top 20 Debtor;0.4338;;;
 FIDC Vixtra;45838;Top 20 Debtor;0.4478;;;
+FIDC Turbi;45777;Coverage Ratio;1.1;0.9;>=;OK
+FIDC Turbi;45808;Coverage Ratio;1.2;0.9;>=;OK
