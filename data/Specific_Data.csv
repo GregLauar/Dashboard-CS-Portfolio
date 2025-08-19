@@ -351,21 +351,21 @@ FIDC Turbi;31/03/2025;UTR;0.663;;;
 FIDC Turbi;30/04/2025;UTR;0.705;;;
 FIDC Turbi;31/05/2025;UTR;0.677;;;
 FIDC Turbi;30/06/2025;UTR;0.713;;;
-FIDC Turbi;31/03/2024;# of cars pledged to the FIDC;1397;;;
-FIDC Turbi;30/06/2024;# of cars pledged to the FIDC;1557;;;
-FIDC Turbi;30/09/2024;# of cars pledged to the FIDC;3064;;;
-FIDC Turbi;31/12/2024;# of cars pledged to the FIDC;4373;;;
-FIDC Turbi;31/03/2025;# of cars pledged to the FIDC;4235;;;
-FIDC Turbi;31/03/2024;Fleet Vlaue pledged to the FIDC (BRL mn);188873917;;;
-FIDC Turbi;30/06/2024;Fleet Vlaue pledged to the FIDC (BRL mn);213230532;;;
-FIDC Turbi;30/09/2024;Fleet Vlaue pledged to the FIDC (BRL mn);389157932.1;;;
-FIDC Turbi;31/12/2024;Fleet Vlaue pledged to the FIDC (BRL mn);625212150;;;
-FIDC Turbi;31/03/2025;Fleet Vlaue pledged to the FIDC (BRL mn);556711686.6;;;
-FIDC Turbi;31/03/2024;Flow of Receivables + Fleet Value ;236743917;;;
-FIDC Turbi;30/06/2024;Flow of Receivables + Fleet Value ;256810532;;;
-FIDC Turbi;30/09/2024;Flow of Receivables + Fleet Value ;414423845.9;;;
-FIDC Turbi;31/12/2024;Flow of Receivables + Fleet Value ;650379393;;;
-FIDC Turbi;31/03/2025;Flow of Receivables + Fleet Value ;607160209.7;;;
+FIDC Turbi;31/03/2024;# of cars pledged to the FIDC;1397.00;;;
+FIDC Turbi;30/06/2024;# of cars pledged to the FIDC;1557.00;;;
+FIDC Turbi;30/09/2024;# of cars pledged to the FIDC;3064.00;;;
+FIDC Turbi;31/12/2024;# of cars pledged to the FIDC;4373.00;;;
+FIDC Turbi;31/03/2025;# of cars pledged to the FIDC;4235.00;;;
+FIDC Turbi;31/03/2024;Fleet Vlaue pledged to the FIDC (BRL mn);188,873,917.00;;;
+FIDC Turbi;30/06/2024;Fleet Vlaue pledged to the FIDC (BRL mn);213,230,532.00;;;
+FIDC Turbi;30/09/2024;Fleet Vlaue pledged to the FIDC (BRL mn);389,157,932.05;;;
+FIDC Turbi;31/12/2024;Fleet Vlaue pledged to the FIDC (BRL mn);625,212,150.00;;;
+FIDC Turbi;31/03/2025;Fleet Vlaue pledged to the FIDC (BRL mn);556,711,686.56;;;
+FIDC Turbi;31/03/2024;Flow of Receivables + Fleet Value ;236,743,917.00;;;
+FIDC Turbi;30/06/2024;Flow of Receivables + Fleet Value ;256,810,532.00;;;
+FIDC Turbi;30/09/2024;Flow of Receivables + Fleet Value ;414,423,845.86;;;
+FIDC Turbi;31/12/2024;Flow of Receivables + Fleet Value ;650,379,392.99;;;
+FIDC Turbi;31/03/2025;Flow of Receivables + Fleet Value ;607,160,209.74;;;
 FIDC Turbi;30/04/2024;Liquidity Ratio;1.4;0.9;>=;OK
 FIDC Turbi;31/05/2024;Liquidity Ratio;1.6;0.9;>=;OK
 FIDC Turbi;30/06/2024;Liquidity Ratio;2;0.9;>=;OK
@@ -918,9 +918,9 @@ CRI Amora;31/03/2025;Real Estate Value;25.926074;;;OK
 CRI Amora;30/04/2025;Real Estate Value;28.9;;;OK
 CRI Amora;31/05/2025;Real Estate Value;28.3;;;OK
 CRI Amora;30/06/2025;Real Estate Value;32.7;;;OK
-FIDC Principia BNPL;31/05/2025;FPD35;0.1644;0.12;<=;OK
-FIDC Principia BNPL;30/04/2025;FPD35;0.1105;0.12;<=;OK
-FIDC Principia BNPL;31/05/2025;SPD30;0.225;0.19;<=;FLAG
+FIDC Principia BNPL;31/05/2025;FPD35;0.1182;0.12;<=;OK
+FIDC Principia BNPL;30/04/2025;FPD35;0.1033;0.12;<=;OK
+FIDC Principia BNPL;31/05/2025;SPD30;0.1698;0.19;<=;OK
 FIDC Principia BNPL;31/05/2025;Weighted Average Portfolio Rate (% p.m.);0.0731;0.04;>=;OK
 FIDC Principia BNPL;30/04/2025;Weighted Average Portfolio Rate (% p.m.);0.0676;0.04;>=;OK
 FIDC Principia BNPL;31/05/2025;Weighted Average Portfolio Maturity (months);16.58;22;<=;OK
@@ -1103,10 +1103,10 @@ FIDC Turbi;31/05/2025;Coverage Ratio;1.2;0.9;>=;OK
 FIDC Turbi;30/06/2025;# of cars pledged to the FIDC;4235;;;
 FIDC Turbi;30/06/2025;Fleet Vlaue pledged to the FIDC (BRL mn);556711686.6;;;
 FIDC Turbi;30/06/2025;Flow of Receivables + Fleet Value ;579798913.8;;;
-FIDC Vixtra;28/02/2025;Top 20 Debtor;0.4944;;;
-FIDC Vixtra;31/03/2025;Top 20 Debtor;0.5286;;;
-FIDC Vixtra;30/04/2025;Top 20 Debtor;0.5213;;;
-FIDC Vixtra;31/05/2025;Top 20 Debtor;0.4338;;;
+FIDC Principia BNPL;30/06/2025;FPD35;0.0864;0.12;<=;OK
+FIDC Principia BNPL;30/06/2025;SPD30;0.1398;0.19;<=;OK
+FIDC Principia BNPL;30/04/2025;Weighted Average Loss 30d;0.1086;0.21;<=;OK
+FIDC Principia BNPL;31/05/2025;Weighted Average Loss 30d;0.1745;0.21;<=;OK
 FIDC Vixtra;30/06/2025;Top 20 Debtor;0.4478;;;
 FIDC Turbi;30/04/2025;Coverage Ratio;1.1;0.9;>=;OK
 FIDC Turbi;31/05/2025;Coverage Ratio;1.2;0.9;>=;OK
