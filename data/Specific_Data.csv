@@ -554,9 +554,9 @@ FIDC Facio;30/06/2025;Return Index 30;1.0575;0.95;>=;OK
 FIDC Facio;30/04/2025;Weighted Average Portfolio Rate (% p.m.);0.2407;;;
 FIDC Facio;31/05/2025;Weighted Average Portfolio Rate (% p.m.);0.2177;;;
 FIDC Facio;30/06/2025;Weighted Average Portfolio Rate (% p.m.);0.2377;;;
-FIDC Facio;30/04/2025;Weighted Average Portfolio Maturity (months);10.87;;;
-FIDC Facio;31/05/2025;Weighted Average Portfolio Maturity (months);12.39;;;
-FIDC Facio;30/06/2025;Weighted Average Portfolio Maturity (months);12.22;;;
+FIDC Facio;30/04/2025;Weighted Average Portfolio Maturity (days);10.87;;;
+FIDC Facio;31/05/2025;Weighted Average Portfolio Maturity (days);12.39;;;
+FIDC Facio;30/06/2025;Weighted Average Portfolio Maturity (days);12.22;;;
 Deb Mottu V;30/04/2025;LTV (Indebtedness Ratio);0.57;0.8;<=;OK
 Deb Mottu V;31/05/2025;LTV (Indebtedness Ratio);0.55;0.8;<=;OK
 Deb Mottu V;30/06/2025;LTV (Indebtedness Ratio);0.54;0.8;<=;OK
@@ -1107,6 +1107,9 @@ FIDC Principia BNPL;30/06/2025;FPD35;0.0864;0.12;<=;OK
 FIDC Principia BNPL;30/06/2025;SPD30;0.1398;0.19;<=;OK
 FIDC Principia BNPL;30/04/2025;Weighted Average Loss 30d;0.1086;0.21;<=;OK
 FIDC Principia BNPL;31/05/2025;Weighted Average Loss 30d;0.1745;0.21;<=;OK
-FIDC Vixtra;30/06/2025;Top 20 Debtor;0.4478;;;
-FIDC Turbi;30/04/2025;Coverage Ratio;1.1;0.9;>=;OK
-FIDC Turbi;31/05/2025;Coverage Ratio;1.2;0.9;>=;OK
+FIDC Alume;31/05/2025;Personal Loan Concentration;0.537;0.55;<=;OK
+FIDC Alume;30/06/2025;Personal Loan Concentration;0.527;0.55;<=;OK
+FIDC Alume;31/05/2025;Renegotiation Index;0.005;0.15;<=;OK
+FIDC Alume;30/06/2025;Renegotiation Index;0;0.15;<=;OK
+FIDC Alume;31/05/2025;Coverage Ratio;1.1;1;>=;OK
+FIDC Alume;30/06/2025;Coverage Ratio;1.1;1;>=;OK
