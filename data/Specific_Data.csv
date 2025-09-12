@@ -351,11 +351,11 @@ FIDC Turbi;31/03/2025;UTR;0.663;;;
 FIDC Turbi;30/04/2025;UTR;0.705;;;
 FIDC Turbi;31/05/2025;UTR;0.677;;;
 FIDC Turbi;30/06/2025;UTR;0.713;;;
-FIDC Turbi;31/03/2024;# of cars pledged to the FIDC;1397.00;;;
-FIDC Turbi;30/06/2024;# of cars pledged to the FIDC;1557.00;;;
-FIDC Turbi;30/09/2024;# of cars pledged to the FIDC;3064.00;;;
-FIDC Turbi;31/12/2024;# of cars pledged to the FIDC;4373.00;;;
-FIDC Turbi;31/03/2025;# of cars pledged to the FIDC;4235.00;;;
+FIDC Turbi;31/03/2024;# of cars pledged to the FIDC;1397;;;
+FIDC Turbi;30/06/2024;# of cars pledged to the FIDC;1557;;;
+FIDC Turbi;30/09/2024;# of cars pledged to the FIDC;3064;;;
+FIDC Turbi;31/12/2024;# of cars pledged to the FIDC;4373;;;
+FIDC Turbi;31/03/2025;# of cars pledged to the FIDC;4235;;;
 FIDC Turbi;31/03/2024;Fleet Vlaue pledged to the FIDC (BRL mn);188,873,917.00;;;
 FIDC Turbi;30/06/2024;Fleet Vlaue pledged to the FIDC (BRL mn);213,230,532.00;;;
 FIDC Turbi;30/09/2024;Fleet Vlaue pledged to the FIDC (BRL mn);389,157,932.05;;;
@@ -849,8 +849,8 @@ FIDC Koin;31/01/2025;Repurchase Index;0.0366;0.15;<=;OK
 FIDC Koin;28/02/2025;Repurchase Index;0.0274;0.15;<=;OK
 FIDC Koin;31/03/2025;Repurchase Index;0.0255;0.15;<=;OK
 FIDC Koin;30/04/2025;Repurchase Index;0.0306;0.15;<=;OK
-FIDC Koin;31/05/2024;Repurchase Index;0.0126;0.15;<=;OK
-FIDC Koin;30/06/2024;Repurchase Index;0.0188;0.15;<=;OK
+FIDC Koin;31/05/2025;Repurchase Index;0.0126;0.15;<=;OK
+FIDC Koin;30/06/2025;Repurchase Index;0.0188;0.15;<=;OK
 FIDC Koin;31/10/2024;Under 30 Index;0.0086;0.12;<=;OK
 FIDC Koin;30/11/2024;Under 30 Index;0.0029;0.12;<=;OK
 FIDC Koin;31/12/2024;Under 30 Index;0.004;0.12;<=;OK
@@ -858,8 +858,8 @@ FIDC Koin;31/01/2025;Under 30 Index;0.0033;0.12;<=;OK
 FIDC Koin;28/02/2025;Under 30 Index;0.0015;0.12;<=;OK
 FIDC Koin;31/03/2025;Under 30 Index;0.0066;0.12;<=;OK
 FIDC Koin;30/04/2025;Under 30 Index;0.0061;0.12;<=;OK
-FIDC Koin;31/05/2024;Under 30 Index;0.0168;0.12;<=;OK
-FIDC Koin;30/06/2024;Under 30 Index;0.005;0.12;<=;OK
+FIDC Koin;31/05/2025;Under 30 Index;0.0168;0.12;<=;OK
+FIDC Koin;30/06/2025;Under 30 Index;0.005;0.12;<=;OK
 FIDC Koin;31/10/2024;Over 30 Index;0.0291;0.12;<=;OK
 FIDC Koin;30/11/2024;Over 30 Index;0.0208;0.12;<=;OK
 FIDC Koin;31/12/2024;Over 30 Index;0.0177;0.12;<=;OK
@@ -867,8 +867,8 @@ FIDC Koin;31/01/2025;Over 30 Index;0.0144;0.12;<=;OK
 FIDC Koin;28/02/2025;Over 30 Index;0.013;0.12;<=;OK
 FIDC Koin;31/03/2025;Over 30 Index;0.0183;0.12;<=;OK
 FIDC Koin;30/04/2025;Over 30 Index;0.0241;0.12;<=;OK
-FIDC Koin;31/05/2024;Over 30 Index;0.0211;0.12;<=;OK
-FIDC Koin;30/06/2024;Over 30 Index;0.047;0.12;<=;OK
+FIDC Koin;31/05/2025;Over 30 Index;0.0211;0.12;<=;OK
+FIDC Koin;30/06/2025;Over 30 Index;0.047;0.12;<=;OK
 FIDC Koin;31/10/2024;Over 60 Index;0.0394;0.15;<=;OK
 FIDC Koin;30/11/2024;Over 60 Index;0.0329;0.15;<=;OK
 FIDC Koin;31/12/2024;Over 60 Index;0.0365;0.15;<=;OK
@@ -876,8 +876,8 @@ FIDC Koin;31/01/2025;Over 60 Index;0.0578;0.15;<=;OK
 FIDC Koin;28/02/2025;Over 60 Index;0.0303;0.15;<=;OK
 FIDC Koin;31/03/2025;Over 60 Index;0.0318;0.15;<=;OK
 FIDC Koin;30/04/2025;Over 60 Index;0.0396;0.15;<=;OK
-FIDC Koin;31/05/2024;Over 60 Index;0.0303;0.15;<=;OK
-FIDC Koin;30/06/2024;Over 60 Index;0.0367;0.15;<=;OK
+FIDC Koin;31/05/2025;Over 60 Index;0.0303;0.15;<=;OK
+FIDC Koin;30/06/2025;Over 60 Index;0.0367;0.15;<=;OK
 FIDC Koin;31/10/2024;Over 90 Index;0.0505;0.175;<=;OK
 FIDC Koin;30/11/2024;Over 90 Index;0.0596;0.175;<=;OK
 FIDC Koin;31/12/2024;Over 90 Index;0.1544;0.175;<=;OK
@@ -885,8 +885,8 @@ FIDC Koin;31/01/2025;Over 90 Index;0.057;0.175;<=;OK
 FIDC Koin;28/02/2025;Over 90 Index;0.0517;0.175;<=;OK
 FIDC Koin;31/03/2025;Over 90 Index;0.0541;0.175;<=;OK
 FIDC Koin;30/04/2025;Over 90 Index;0.0947;0.175;<=;OK
-FIDC Koin;31/05/2024;Over 90 Index;0.0504;0.175;<=;OK
-FIDC Koin;30/06/2024;Over 90 Index;0.0537;0.175;<=;OK
+FIDC Koin;31/05/2025;Over 90 Index;0.0504;0.175;<=;OK
+FIDC Koin;30/06/2025;Over 90 Index;0.0537;0.175;<=;OK
 CRI Amora;28/02/2025;CRI Net worth;25.8;;;OK
 CRI Amora;31/03/2025;CRI Net worth;28.8;;;OK
 CRI Amora;30/04/2025;CRI Net worth;33.3;;;OK
@@ -1113,3 +1113,8 @@ FIDC Alume;31/05/2025;Renegotiation Index;0.005;0.15;<=;OK
 FIDC Alume;30/06/2025;Renegotiation Index;0;0.15;<=;OK
 FIDC Alume;31/05/2025;Coverage Ratio;1.1;1;>=;OK
 FIDC Alume;30/06/2025;Coverage Ratio;1.1;1;>=;OK
+FIDC Koin;45869;Repurchase Index;0.012;0.15;>=;FLAG
+FIDC Koin;45869;Under 30 Index;0.0042;0.12;>=;FLAG
+FIDC Koin;45869;Over 30 Index;0.02;0.12;>=;FLAG
+FIDC Koin;45869;Over 60 Index;0.0601;0.15;>=;FLAG
+FIDC Koin;45869;Over 90 Index;0.0478;0.175;>=;FLAG
